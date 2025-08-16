@@ -1,0 +1,21 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+*.tfvars
+terraform.tfvars.json
+override.tf
+override.tf.json
+*.backup
+#variables.tfvars
+
+# Ignore editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Optional: SSH keys, env files
+*.pem
+*.env
