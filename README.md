@@ -51,10 +51,14 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 ├── outputs.tf (optional)
 ├── README.md
 └── .gitignore
+```
 
 ---
 
 ## 🚀 How to Use This
+
+---
+
 
 ```
 1. **Clone the repo**
