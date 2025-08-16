@@ -141,13 +141,4 @@ Created by [Shiv Shrivastava](https://github.com/ShivShrivastava)
 
 Give it a ⭐ on GitHub if you found it useful!
 
-````
-
----
-
-
-````
-
----
-
 
