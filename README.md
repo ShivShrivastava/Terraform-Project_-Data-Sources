@@ -62,7 +62,7 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/Terraform-Project_-Data-Sources.git
+   git clone https://github.com/ShivShrivastava/Terraform-Project_-Data-Sources.git
    cd Terraform-Project_-Data-Sources
    ```
 
