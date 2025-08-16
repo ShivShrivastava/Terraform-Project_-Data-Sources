@@ -52,12 +52,9 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 ├── README.md
 └── .gitignore
 
-
 ---
 
 ## 🚀 How to Use This
-
----
 
 ```
 1. **Clone the repo**
