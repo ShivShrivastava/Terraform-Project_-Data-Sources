@@ -8,6 +8,7 @@ terraform.tfvars.json
 override.tf
 override.tf.json
 *.backup
+.terraform.lock.hcl
 #variables.tfvars
 
 # Ignore editor and OS files
