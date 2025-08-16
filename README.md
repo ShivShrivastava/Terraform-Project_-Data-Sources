@@ -59,8 +59,6 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 
 ---
 
-
-```
 1. **Clone the repo**
 
    ```bash
