@@ -1,5 +1,3 @@
-Perfect bhai! Tere Terraform code ke base par maine ek **professional-level `README.md`** bana diya hai — jo tu seedha apne GitHub repo mein daal sakta hai. 👇
-
 ---
 
 ## ✅ `README.md` – Final Version
