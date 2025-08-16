@@ -47,8 +47,6 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 
 ## 📦 Folder Layout
 
-```
-
 .
 ├── main.tf
 ├── variables.tf
