@@ -7,7 +7,8 @@ Perfect bhai! Tere Terraform code ke base par maine ek **professional-level `REA
 ```markdown
 # 🚀 Terraform: Create Azure VM in Existing VNet & Subnet (Using Data Sources)
 
-This project demonstrates how to use **Terraform Data Sources** to reference an **existing Azure Resource Group, Virtual Network, and Subnet**, and create a new **Linux Virtual Machine (Ubuntu)** in that subnet.
+This project demonstrates how to use **Terraform Data Sources** to reference an **existing Azure Resource Group,
+ Virtual Network, and Subnet**, and create a new **Linux Virtual Machine (Ubuntu)** in that subnet.
 
 ---
 
