@@ -59,87 +59,7 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 
 ---
 
-## 📜 Terraform Code Summary
 
-### `main.tf`
-
-```hcl
-variable "prefix" {
-  default = "shiv"
-}
-
-# Data sources
-data "azurerm_resource_group" "shared-rg" {
-  name = "shared-network-rg"
-}
-
-data "azurerm_virtual_network" "shared-vnet" {
-  name                = "share-vnet"
-  resource_group_name = data.azurerm_resource_group.shared-rg.name
-}
-
-data "azurerm_subnet" "shared-subnet" {
-  name                 = "shared-subnet"
-  resource_group_name  = data.azurerm_resource_group.shared-rg.name
-  virtual_network_name = data.azurerm_virtual_network.shared-vnet.name
-}
-
-# New Resource Group (for VM)
-resource "azurerm_resource_group" "rg" {
-  name     = "${var.prefix}-rg"
-  location = data.azurerm_resource_group.shared-rg.location
-}
-
-# NIC using existing subnet
-resource "azurerm_network_interface" "nic" {
-  name                = "${var.prefix}-nic"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-
-  ip_configuration {
-    name                          = "testconfiguration1"
-    subnet_id                     = data.azurerm_subnet.shared-subnet.id
-    private_ip_address_allocation = "Dynamic"
-  }
-}
-
-# Linux Virtual Machine
-resource "azurerm_virtual_machine" "vm" {
-  name                  = "${var.prefix}-vmshared"
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.nic.id]
-  vm_size               = "Standard_B1s"
-  delete_data_disks_on_termination = true
-
-  storage_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
-    version   = "latest"
-  }
-
-  storage_os_disk {
-    name              = "myosdisk1"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    managed_disk_type = "Standard_LRS"
-  }
-
-  os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
-  }
-
-  os_profile_linux_config {
-    disable_password_authentication = false
-  }
-
-  tags = {
-    environment = "staging"
-  }
-}
 ````
 
 ---
@@ -218,7 +138,7 @@ MIT
 
 ## ✍️ Author
 
-Created by [Shiv SHrivastava](https://github.com/ShivShrivastava)
+Created by [Shiv Shrivastava](https://github.com/ShivShrivastava)
 
 ---
 
@@ -230,13 +150,7 @@ Give it a ⭐ on GitHub if you found it useful!
 
 ---
 
-### ✅ Now What To Do:
-1. Paste this `README.md` file in your repo root.
-2. Commit & push to GitHub:
-   ```bash
-   git add README.md
-   git commit -m "Added project README"
-   git push
+
 ````
 
 ---
