@@ -57,11 +57,14 @@ This project demonstrates how to use **Terraform Data Sources** to reference an 
 
 ## 🚀 How to Use This
 
+---
+
+```
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/terraform-vm-existing-vnet.git
-   cd terraform-vm-existing-vnet
+   git clone https://github.com/your-username/Terraform-Project_-Data-Sources.git
+   cd Terraform-Project_-Data-Sources
    ```
 
 2. **Login to Azure**
